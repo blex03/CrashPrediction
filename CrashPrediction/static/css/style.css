@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Set Roboto as the default font */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.mandatory {
+    margin-right:30px;
+}
+
+.optional {
+    margin-top:150px;
+    margin-left:30px;
+}
+
+#predictButton {
+    border-radius: 8px;
+    width: 200px;
+    height: 80px;
+    margin-top: 275px;
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+
+#inputForm {
+    order: 1;
+    font-size: 30px
+}
+
+
+
+#map{
+    order: 2;
+    margin: 0;
+    padding: 0;
+    height: 60%;
+    width: 45%;
+}
+
+.results {
+    display: none; /* Initially hide the results component */
+    border: 2px solid black; /* Set border properties as desired */
+    padding: 20px; /* Optional: Add padding for better visual appearance */
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    width: 20%;
+    border-radius: 12px;
+}
+
+.results h1{
+    text-align: center
+}
+
+input, select {
+    border-radius: 4px;
+    width: 300px; /* Example: Set the width to 300 pixels */
+    height: 40px; /* Example: Set the height to 40 pixels */
+    font-size: 16px; /* Optional: Adjust the font size */
+}

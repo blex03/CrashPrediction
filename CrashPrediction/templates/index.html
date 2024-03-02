@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <script type="module" src="../static/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="inputForm">
+      <div class="flex-container">
+        <div class="mandatory">
+          <h1>Crash Predictor</h1>
+          <legend>Time:</legend>
+          <input type="time" id="timeInput" name="time">
+          <br></br>
+
+          <legend>Date:</legend>
+          <input type="text" id="dateInput" name="date" placeholder="MM/DD">
+          <br><br>
+      
+          <legend>Day:</legend>
+          <select id="dayInput" name="day">
+              <option value="Sunday">Sunday</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+          </select>
+        </div>
+        <br></br>
+        
+        <div class="optional">
+          <legend>Weather Condition:</legend>
+          <select id="weatherInput" name="weather">
+              <option value="Clear">Clear</option>
+              <option value="Cloudy">Cloudy</option>
+              <option value="Rain">Rain</option>
+              <option value="Snow">Snow</option>
+              <option value="Sleet or Hail ">Sleet or Hail</option>
+              <option value="Freezing Rain or Freezing Drizzle">Freezing Rain or Drizzle</option>
+              <option value="Blowing Snow">Blowing Snow</option>
+              <option value="Fog, Smog, Smoke">Fog, Smog, or Smoke</option>
+              <option value="Severe Crosswinds">Severe Crosswinds</option>
+              <option value="Blowing Sand, Soil, Dirt">Blowing Sand, Soil, or Dirt</option>
+              <option value="Other">Other</option>
+              <option value="Unknown">Unknown</option>
+              <option value="Not Applicable">Not Applicable</option>  
+          </select>
+          <br></br>
+          <legend>Light Condition</legend>
+          <select id="lightInput" name="light">
+              <option value="Daylight">Daylight</option>
+              <option value="Dark-Lighted">Dark With Lights</option>
+              <option value="Dark-Not Lighted">Dark Without Lights</option>
+              <option value="Dark-Unknown Lighting">Dark (Unknown Lighting)</option>
+              <option value="Dusk">Dusk</option>
+              <option value="Dawn">Dawn</option>
+              <option value="Other">Other</option>
+              <option value="Unkown">Unkown</option>
+          </select>
+          <br></br>
+          <legend>Street Type</legend>
+          <select id="streetInput" name="street">
+              <option value="State">State</option>
+              <option value="Local">Local</option>
+              <option value="USRoute">US Route</option>
+              <option value="Interstate">Interstate</option>
+              <option value="Unknown" selected>Unknown</option>
+          </select>
+          <br></br>
+        </div>
+        <button id="predictButton" type="submit">Predict!</button>
+      </div>
+    </form>
+    <div id="map"></div>
+    <div id="resultsComponent" class="results"></div>
+
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyBR2bHfU1Sm0lt2FnK9fpOgZi-XxuxO_IU", v: "weekly"});</script>
+  </body>
+</html>
